@@ -244,6 +244,6 @@ AwesomeAlert.defaultProps = {
   confirmText: 'Confirm',
   cancelButtonColor: '#D0D0D0',
   confirmButtonColor: '#AEDEF4',
-  customView: null
+  customView: null,
     icon: null,
 };
