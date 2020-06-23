@@ -99,11 +99,10 @@ export default class AwesomeAlert extends Component {
     } = data;
 
     return (
-      <TouchableOpacity onPress={onPress}>
-        <View style={[styles.button, { backgroundColor }, buttonStyle]}>
+        <TouchableOpacity onPress={onPress} style={[styles.button, { backgroundColor }, buttonStyle]}>
           <Text style={[styles.buttonText, buttonTextStyle]}>{text}</Text>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+    
     );
   };
 
