@@ -139,6 +139,7 @@ export default class AwesomeAlert extends Component {
       titleStyle,
       messageStyle,
       actionContainerStyle
+      icon = null,
     } = this.props;
 
     const cancelButtonData = {
@@ -168,6 +169,11 @@ export default class AwesomeAlert extends Component {
           <View style={[styles.content, contentStyle]}>
             {showProgress ? (
               <ActivityIndicator size={progressSize} color={progressColor} />
+            ) : null}
+            {icon ? (
+              <View style={[{alignItems:'center'}]}> 
+              {icon}
+              </View>
             ) : null}
             {title ? (
               <Text style={[styles.title, titleStyle]}>{title}</Text>
@@ -223,7 +229,8 @@ AwesomeAlert.propTypes = {
   confirmButtonColor: PropTypes.string,
   onCancelPressed: PropTypes.func,
   onConfirmPressed: PropTypes.func,
-  customView: PropTypes.object
+  customView: PropTypes.object,
+  icon: PropTypes.object,
 };
 
 AwesomeAlert.defaultProps = {
