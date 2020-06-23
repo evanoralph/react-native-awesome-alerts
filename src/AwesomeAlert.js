@@ -110,7 +110,7 @@ export default class AwesomeAlert extends Component {
     const animation = { transform: [{ scale: this.springValue }] };
 
     const { showProgress } = this.props;
-    const { title, message, customView = null } = this.props;
+    const { title, message, customView = null, icon = null, } = this.props;
 
     const {
       showCancelButton,
@@ -139,7 +139,6 @@ export default class AwesomeAlert extends Component {
       titleStyle,
       messageStyle,
       actionContainerStyle
-      icon = null,
     } = this.props;
 
     const cancelButtonData = {
@@ -246,4 +245,5 @@ AwesomeAlert.defaultProps = {
   cancelButtonColor: '#D0D0D0',
   confirmButtonColor: '#AEDEF4',
   customView: null
+    icon: null,
 };
